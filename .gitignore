@@ -1,1 +1,6 @@
 comments.txt
+
+# WordPress
+web/wp-admin/
+web/wp-includes/
+web/wp-*
