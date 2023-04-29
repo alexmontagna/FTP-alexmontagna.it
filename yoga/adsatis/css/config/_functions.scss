@@ -1,0 +1,11 @@
+@mixin forDesktop($rule: none) {
+    @if $rule == "huge" {
+        @media only screen and (min-width: 1280px) {
+            @content;
+        }
+    } @else {
+        @media only screen and (min-width: 1024px) {
+            @content;
+        }
+    }
+}

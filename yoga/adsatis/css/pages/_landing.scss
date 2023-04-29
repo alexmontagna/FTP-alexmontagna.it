@@ -1,0 +1,175 @@
+.main {
+    padding: 2.5rem 5%;
+    text-align: center;
+    .glassblur {
+        margin-inline: 3rem;
+    }
+}
+
+.section {
+    width: 100%;
+    margin: 1rem auto;
+    padding: 2rem 2rem;
+    border-radius: $radius;
+    background: inherit;
+    text-align: center;
+    @include forDesktop {
+        width: 70%;
+    }
+}
+
+
+.section__title {
+    font-size: 2.2rem;
+    margin: 0;
+    font-weight: bold;
+    color: var(--color-dark);
+    background-color: var(--color-primary);
+    padding: 0.3rem 0.6rem;
+}
+
+.section__content {
+    background-color: rgba($color: #ffffff, $alpha: 0.5);
+    padding: 1rem 2rem;
+}
+
+.orari {
+    list-style-type: none;
+    padding: 1rem;
+    color: brown;
+    width: 400px;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    li {
+        position: relative;
+        width: fit-content;
+        padding-left: 5rem;
+        &::before {
+            position: absolute;
+            content: "";
+            width: 20px;
+            height: 15px;
+            background-image: url("https://flagicons.lipis.dev/flags/4x3/it.svg");
+            background-size: contain;
+            right: -32px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        &.orari--br {
+            &::before {
+                background-image: url("https://flagicons.lipis.dev/flags/4x3/br.svg");
+            }
+        }
+    }
+}
+
+.pack__price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 0 0 1rem;
+}
+
+.pack__description {
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+    font-weight: bold;
+    line-height: 1.4em;
+}
+
+.pack {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.private form {
+    text-align: center !important;
+    margin: 0 auto !important;
+}
+
+.pack__nav {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    & > * {
+        min-width: 180px;
+    }
+}
+
+.payButton {
+    --alpha: 0.2;
+    display: block;
+    border-radius: $radius;
+    width: 15rem;
+    text-align: center;
+    color: rgba($color: #ffffff, $alpha: 0.85);
+    padding: 0.6rem;
+    background-color: var(--color-dark);
+    margin: 1rem 0;
+    @include forDesktop {
+        margin: 0 1rem;
+    }
+    &:hover {
+        --alpha: 0.6;
+        background-color: var(--color-darker);
+    }
+    &:active {
+        --alpha: 1;
+        transform: scale(0.95, 0.95);
+        background-color: var(--color-darker);
+    }
+    span {
+        all: unset;
+        display: block;
+        background: transparent;
+        font-size: 1.8rem;
+        font-weight: bold;
+    }
+    small {
+        font-size: 0.9rem;
+        display: block;
+        margin-top: 0.5rem;
+        color: var(--color-light);
+    }
+    &.disabled {
+        --alpha: 0.9;
+        --alphaBG: 0.5;
+        background-color: var(--color-gray);
+        pointer-events: none;
+        cursor: not-allowed !important;
+        position: relative;
+        color: var(--color-gray-light);
+        * {
+            color: var(--color-gray-light);
+        }
+        &::before {
+            content: attr(data-disabled);
+            position: absolute;
+            bottom: 2px;
+            left: 0;
+            right: 0;
+            padding: 2px 0;
+            height: 14px;
+            display: grid;
+            place-items: center;
+            background-color: hsla(60, 100%, 50%, 0.667);
+            color: black;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 10px;
+            line-height: 10px;
+        }
+    }
+}
+
+.pack .h5 {
+    margin: 0.5rem auto 0 auto;
+    font-weight: bold;
+}
+.thanks {
+    color: white;
+}
+

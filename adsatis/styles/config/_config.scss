@@ -1,0 +1,86 @@
+$fz: 16;
+$fontsize: #{$fz}px;
+$font: 'Lato', sans-serif;
+$line-height: 1.25em;
+
+$imagedir: './../assets/images/';
+
+$green: #073b3b;
+$green-light: #0d5b5b;
+$green-lighter: #087373;
+$green-dark: #063333;
+$green-darker: #021e1d;
+$green-darker-t5: transparentize($green-darker, 0.5);
+$green-t5: transparentize($green, 0.5);
+$green-o5: opacify($green, 0.5);
+$green-darker-filter: invert(11%) sepia(50%) saturate(527%) hue-rotate(128deg)
+  brightness(99%) contrast(105%);
+$green-filter: invert(21%) sepia(21%) saturate(1228%) hue-rotate(131deg)
+  brightness(94%) contrast(106%);
+// filters - courtesy of https://codepen.io/sosuke/pen/Pjoqqp
+
+$color-1: #f2f1ea;
+$color-2: #104042;
+$color-3: rgb(248, 201, 201);
+$color-3-darkest: rgb(124, 51, 51);
+$color-4: #b1c549;
+$color-5: rgb(245, 244, 238);
+$color-6: #375d5c;
+$color-7: #f4f3ed;
+$color-7a: #f5f4ee;
+$color-8: #e05253;
+$color-9: #395f5f;
+$buttonBackgroundColor: rgba(
+  $color: #104042,
+  $alpha: 0.8,
+);
+$whitish: rgba(
+  $color: white,
+  $alpha: 0.8,
+);
+
+:root {
+  --pathred: #e05052;
+  --pathyellow: #f6b039;
+  --pathblue: #5a9cab;
+  --pathgreen: #45744e;
+  --pathredgray: #bbb;
+  --pathyellowgray: #bbb;
+  --pathbluegray: #bbb;
+  --pathgreengray: #bbb;
+}
+
+.page-template-page-via-dei-consumatori {
+  --pathColor: var(--pathred);
+}
+
+.page-template-page-via-della-filiera {
+  --pathColor: var(--pathyellow);
+}
+
+.page-template-page-via-dell-ambiente {
+  --pathColor: var(--pathgreen);
+}
+
+.page-template-page-via-della-vicinanza {
+  --pathColor: var(--pathblue);
+}
+
+// viewport
+$nh: 0;
+$xx: 320px; // smartphone
+$xs: 599px; // smartphone
+$sm: 600px; // tablet portrait
+$md: 768px; // tablet landscape
+$lg: 1024px; // desktop
+$xl: 1280px; // extra large
+$wd: 1440px; // wide
+$xw: 1600px; // extra wide
+$en: 1920px; // enormous
+$tablet: $md;
+$desktop: $lg;
+
+$breakpoint-tablet: 768px;
+$breakpoint-ipad: 1024px;
+$breakpoint-desktop: 1280px;
+$breakpoint-grid-max-width: 1280px;

@@ -1,0 +1,52 @@
+.parallaxMODEL {
+    /* The image used */
+    background-image: url("img_parallax.jpg");
+    /* Set a specific height */
+    min-height: 500px;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@media (print) {
+    a[href]::after {
+        content: " (" attr(href) " )";
+    }
+}
+
+a {
+    font-weight: bold;
+}
+
+$radius: 0;
+
+body {
+    &[data-season="autumn"] {
+        background-image: url(./../../images/autumn.jpeg);
+    }
+    &[data-season="winter"] {
+        background-image: url(./../../images/winter.jpg);
+    }
+    &[data-season="spring"] {
+        background-image: url(./../../images/spring.jpg);
+    }
+    &[data-season="summer"] {
+        background-image: url(./../../images/summer.jpg);
+    }
+    background-size: cover;
+    background-position: center bottom 53%;
+    background-attachment: fixed;
+}
+
+body,
+input,
+select,
+textarea {
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 16pt;
+    font-weight: 300;
+    line-height: 1.65em;
+    letter-spacing: -0.015em;
+}

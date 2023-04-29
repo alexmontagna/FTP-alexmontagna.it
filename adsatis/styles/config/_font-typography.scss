@@ -1,0 +1,185 @@
+:root {
+  font-size: $fontsize;
+}
+
+html {
+    font-size: 100%;
+    font-family: $font;
+    font-weight: 400;
+    color: $green;
+  }
+  
+  b,
+  strong {
+    font-weight: 700;
+  }
+  
+  section {
+    line-height: 1.3em;
+    letter-spacing: rem(1);
+    font-size: rem(15);
+    @include for($md) {
+      font-size: rem(17);
+    }
+    @include for($lg) {
+      font-size: rem(19);
+    }
+    @include for($xl) {
+      font-size: rem(21);
+    }
+  }
+  
+  p {
+    margin-bottom: rem(16);
+    @include for($md) {
+      margin-bottom: rem(24);
+    }
+    @include for($lg) {
+      margin-bottom: rem(30);
+    }
+    &:last-of-type {
+      margin-bottom: 0;
+      & + * {
+        margin-top: rem(36);
+      }
+    }
+  }
+  
+  .title {
+    text-transform: uppercase;
+    line-height: 1.3em;
+    font-size: rem(18);
+    @include for($md) {
+      font-size: rem(28);
+    }
+    @include for($lg) {
+      font-size: rem(32);
+    }
+  }
+  
+  .bigtitle {
+    font-size: rem(20);
+    text-transform: uppercase;
+    line-height: 1.2em;
+    @include for($nh, $lg) {
+      text-align: center;
+    }
+    @include for($md) {
+      font-size: rem(40);
+    }
+    @include for($lg) {
+      font-size: rem(48);
+    }
+    @include for($wd) {
+      font-size: rem(58);
+    }
+  }
+  
+  .hypertitle {
+    font-size: rem(22);
+    text-transform: uppercase;
+    line-height: 1.3em;
+    text-align: center;
+    @include for($md) {
+      font-size: rem(32);
+    }
+    @include for($lg) {
+      font-size: rem(58);
+    }
+  }
+  
+  .subtitle {
+    font-weight: 700;
+    font-size: rem(24);
+  }
+  
+  .paragraph {
+    font-weight: 400;
+    font-size: rem(21);
+    line-height: 1.3em;
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p {
+      margin-bottom: 1rem;
+    }
+  }
+  
+  body {
+    font-family: 'Archivo', sans-serif;
+    font-weight: 400;
+  }
+  
+  :is(h1, h2, h3, h4, h5, h6) {
+    text-transform: uppercase;
+  }
+  
+  :is(.future__topic, p, .footer__bar, ul, input, textarea, .candidatura__title) {
+    font-family: 'Archivo', sans-serif;
+  }
+  
+  :is(h1, h2, h3, h4, h5, h6, .bar, .header__nav, .paragraphs__highlight, .accordion__title, .path__view, .path__paragraph, .footer__text, .header__sublink) {
+    font-family: 'Syncopate', sans-serif;
+  }
+  
+  :is(.footer__title) {
+    font-family: 'Archivo', sans-serif;
+  }
+  
+  // # font-sizes
+  
+  .bar {
+    font-size: 0.62rem;
+    @include for($lg) {
+      font-size: 0.7rem;
+    }
+  }
+  
+  .footer__bar {
+    font-size: rem(11);
+  }
+  
+  .footer__nav {
+    font-size: rem(10);
+  }
+  
+  .syncopate {
+    font-family: 'Syncopate', sans-serif;
+  }
+  
+  .standard-title {
+    font-family: 'Syncopate', sans-serif;
+    font-size: rem(54);
+    line-height: 1.2em;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+  
+  .standard-paragraph {
+    line-height: 1.5rem;
+  }
+  
+  .grassetto {
+    font-weight: bold;
+  }
+  
+  .spotlight {
+    color: var(--pathColor);
+    .bigtitle {
+      line-height: 1.3em;
+      font-family: Archivo;
+      text-transform: none;
+      font-size: rem(32);
+      @include for($md) {
+        font-size: rem(48);
+      }
+    }
+  }
+  
+  .cormorant {
+    font-family: 'Cormorant Infant', serif;
+  }
+  

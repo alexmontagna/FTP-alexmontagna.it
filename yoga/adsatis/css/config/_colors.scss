@@ -1,0 +1,48 @@
+:root {
+  --hue-autumn: 27;
+  --hue-winter: 234;
+  --hue-summer: 27;
+  --hue-spring: 27;
+  --alpha: 0.9;
+  --alphaBG: 1;
+  --color-gray: hsla(0, 0%, 47%, var(--alpha));
+  --color-gray-light: hsla(0, 0%, 77%, var(--alpha));
+  --color-white: whitesmoke;
+  --color-spot: rgb(243, 243, 239);
+
+  --pink: #f8aab6;
+  --yellow: #fccf61;
+  --blue: #8dbaed;
+  --green: #77bb78;
+}
+
+body {
+  &[data-season="autumn"] {
+      --hue: var(--hue-autumn);
+  }
+  &[data-season="winter"] {
+      --hue: var(--hue-winter);
+  }
+  &[data-season="spring"] {
+      --hue: var(--hue-spring);
+  }
+  &[data-season="summer"] {
+      --hue: var(--hue-summer);
+  }
+  --hue: 0;
+  --color-primary: hsla(var(--hue), 87%, 67%, var(--alpha));
+  --color-light: hsla(var(--hue), 88%, 78%, var(--alpha));
+  --color-dark: hsla(var(--hue), 76%, 31%, var(--alpha));
+  --color-darker: hsla(var(--hue), 70%, 20%, var(--alpha));
+}
+
+* {
+    color: hsla(var(--hue), 76%, 31%, var(--alpha));
+}
+
+.footer {
+  background-color: rgba(var(--hue), 165, 96, 0.5);
+  .copyright {
+    color: rgb(139, 18, 18);
+  }
+}

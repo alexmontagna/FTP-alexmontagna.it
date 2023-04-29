@@ -1,0 +1,593 @@
+@import url("https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,900;1,400;1,900");
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,300italic,400italic");
+@import url("https://fonts.googleapis.com/css2?family=Original+Surfer&display=swap");
+:root {
+  --hue-autumn: 27;
+  --hue-winter: 234;
+  --hue-summer: 27;
+  --hue-spring: 27;
+  --alpha: 0.9;
+  --alphaBG: 1;
+  --color-gray: hsla(0, 0%, 47%, var(--alpha));
+  --color-gray-light: hsla(0, 0%, 77%, var(--alpha));
+  --color-white: whitesmoke;
+  --color-spot: rgb(243, 243, 239);
+}
+
+body {
+  --hue: 0;
+  --color-primary: hsla(var(--hue), 87%, 67%, var(--alpha));
+  --color-light: hsla(var(--hue), 88%, 78%, var(--alpha));
+  --color-dark: hsla(var(--hue), 76%, 31%, var(--alpha));
+  --color-darker: hsla(var(--hue), 70%, 20%, var(--alpha));
+}
+
+body[data-season="autumn"] {
+  --hue: var(--hue-autumn);
+}
+
+body[data-season="winter"] {
+  --hue: var(--hue-winter);
+}
+
+body[data-season="spring"] {
+  --hue: var(--hue-spring);
+}
+
+body[data-season="summer"] {
+  --hue: var(--hue-summer);
+}
+
+* {
+  color: hsla(var(--hue), 76%, 31%, var(--alpha));
+}
+
+.footer {
+  background-color: rgba(var(--hue), 165, 96, 0.5);
+}
+
+.footer .copyright {
+  color: #8b1212;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+html,
+body {
+  font-size: 100%;
+}
+
+html {
+  overflow-y: scroll;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  background-color: var(--color-dark);
+  background-color: var(--color-white);
+}
+
+ul {
+  list-style-type: none;
+}
+
+s {
+  text-decoration: line-through;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: inherit;
+  font-weight: 300;
+  line-height: 1em;
+  margin: 0 0 0.5em 0;
+}
+
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h2 {
+  font-size: 2.25em;
+  line-height: 1.5em;
+  letter-spacing: -0.035em;
+}
+
+h3 {
+  font-size: clamp(10%, 1.75em, 100%);
+  line-height: 1.5em;
+  letter-spacing: -0.025em;
+}
+
+h4 {
+  font-size: 1.1em;
+  line-height: 1.5em;
+  letter-spacing: 0;
+}
+
+h5 {
+  font-size: 0.9em;
+  line-height: 1.5em;
+  letter-spacing: 0;
+}
+
+h6 {
+  font-size: 0.7em;
+  line-height: 1.5em;
+  letter-spacing: 0;
+}
+
+p::-moz-selection {
+  background: hsla(var(--hue), 87%, 67%, var(--alpha));
+  color: hsla(var(--hue), 76%, 31%, var(--alpha));
+}
+
+p::selection {
+  background: hsla(var(--hue), 87%, 67%, var(--alpha));
+  color: hsla(var(--hue), 76%, 31%, var(--alpha));
+}
+
+.glassblur {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.glassblur::after {
+  content: "";
+  position: absolute;
+  background: inherit;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: -20px;
+  -webkit-box-shadow: inset 0 0 1000px rgba(255, 255, 255, 0.5);
+          box-shadow: inset 0 0 1000px rgba(255, 255, 255, 0.5);
+  -webkit-filter: blur(4px);
+          filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+  z-index: -1;
+}
+
+.parallaxMODEL {
+  /* The image used */
+  background-image: url("img_parallax.jpg");
+  /* Set a specific height */
+  min-height: 500px;
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media (print) {
+  a[href]::after {
+    content: " (" attr(href) " )";
+  }
+}
+
+a {
+  font-weight: bold;
+}
+
+body {
+  background-size: cover;
+  background-position: center bottom 53%;
+  background-attachment: fixed;
+}
+
+body[data-season="autumn"] {
+  background-image: url(./../../images/autumn.jpeg);
+}
+
+body[data-season="winter"] {
+  background-image: url(./../../images/winter.jpg);
+}
+
+body[data-season="spring"] {
+  background-image: url(./../../images/spring.jpg);
+}
+
+body[data-season="summer"] {
+  background-image: url(./../../images/summer.jpg);
+}
+
+body,
+input,
+select,
+textarea {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 16pt;
+  font-weight: 300;
+  line-height: 1.65em;
+  letter-spacing: -0.015em;
+}
+
+@-webkit-keyframes bgVaiMobile {
+  0% {
+    background-position: 55% 60%;
+    -webkit-filter: blur(3px);
+            filter: blur(3px);
+  }
+  100% {
+    background-position: 37% 60%;
+    -webkit-filter: none;
+            filter: none;
+  }
+}
+
+@keyframes bgVaiMobile {
+  0% {
+    background-position: 55% 60%;
+    -webkit-filter: blur(3px);
+            filter: blur(3px);
+  }
+  100% {
+    background-position: 37% 60%;
+    -webkit-filter: none;
+            filter: none;
+  }
+}
+
+@-webkit-keyframes bgVai {
+  0% {
+    background-position: 55% 40%;
+    -webkit-filter: blur(3px);
+            filter: blur(3px);
+  }
+  100% {
+    background-position: 55% 60%;
+    -webkit-filter: none;
+            filter: none;
+  }
+}
+
+@keyframes bgVai {
+  0% {
+    background-position: 55% 40%;
+    -webkit-filter: blur(3px);
+            filter: blur(3px);
+  }
+  100% {
+    background-position: 55% 60%;
+    -webkit-filter: none;
+            filter: none;
+  }
+}
+
+.bg {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: -100;
+  background-image: url(images/alex-montagna-galleria-vittorio-emanuele-milano-italia-asana-yoga.jpg);
+  background-size: auto 100vh;
+  background-attachment: fixed;
+  -webkit-animation: bgVaiMobile 12s ease-in-out;
+          animation: bgVaiMobile 12s ease-in-out;
+}
+
+@media (min-width: 600px) {
+  .bg {
+    background-size: 100vw auto;
+    background-position: 55% 60%;
+    background-image: url(images/alex-montagna-galleria-vittorio-emanuele-milano-italia-asana-yoga.jpg);
+    background-blend-mode: screen;
+    -webkit-animation: bgVai 9s ease-in-out;
+            animation: bgVai 9s ease-in-out;
+  }
+}
+
+.header {
+  margin-top: 3rem;
+  padding: 0 5%;
+  text-align: center;
+  color: var(--color-white);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.header .header__title {
+  margin: 0 0 3rem;
+  font-size: 3rem;
+  background-color: var(--color-primary);
+  padding: 1rem 2.5rem;
+  font-weight: bold;
+}
+
+.footer {
+  padding: 1rem 0 3rem 0;
+  text-align: center;
+}
+
+.footer a {
+  -webkit-transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
+  opacity: 0.75;
+  padding: 0.2rem 0.6rem;
+}
+
+.footer p {
+  margin: 1rem 0 2rem;
+}
+
+.footer p:last-of-type {
+  margin-bottom: 5rem;
+}
+
+.footer .icons a:hover {
+  opacity: 0.75;
+}
+
+.footer .copyright {
+  font-size: 0.9em;
+  line-height: 1em;
+  margin: 2em 0 0 0;
+  padding: 0;
+  text-align: center;
+}
+
+.footer .copyright a {
+  color: inherit;
+}
+
+.footer .copyright li {
+  display: inline-block;
+  list-style: none;
+  margin-left: 1em;
+  padding-left: 1em;
+}
+
+.footer .copyright li:first-child {
+  border-left: 0;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+ul.icons li {
+  display: inline-block;
+  padding: 0 1.4em;
+}
+
+.main {
+  padding: 2.5rem 5%;
+  text-align: center;
+}
+
+.main .glassblur {
+  margin-inline: 3rem;
+}
+
+.section {
+  width: 100%;
+  margin: 1rem auto;
+  padding: 2rem 2rem;
+  border-radius: 0;
+  background: inherit;
+  text-align: center;
+}
+
+@media only screen and (min-width: 1024px) {
+  .section {
+    width: 70%;
+  }
+}
+
+.section__title {
+  font-size: 2.2rem;
+  margin: 0;
+  font-weight: bold;
+  color: var(--color-dark);
+  background-color: var(--color-primary);
+  padding: 0.3rem 0.6rem;
+}
+
+.section__content {
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 1rem 2rem;
+}
+
+.orari {
+  list-style-type: none;
+  padding: 1rem;
+  color: brown;
+  width: 400px;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.orari li {
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding-left: 5rem;
+}
+
+.orari li::before {
+  position: absolute;
+  content: "";
+  width: 20px;
+  height: 15px;
+  background-image: url("https://flagicons.lipis.dev/flags/4x3/it.svg");
+  background-size: contain;
+  right: -32px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.orari li.orari--br::before {
+  background-image: url("https://flagicons.lipis.dev/flags/4x3/br.svg");
+}
+
+.pack__price {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 0 0 1rem;
+}
+
+.pack__description {
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+  font-weight: bold;
+  line-height: 1.4em;
+}
+
+.pack {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.private form {
+  text-align: center !important;
+  margin: 0 auto !important;
+}
+
+.pack__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 1.5rem;
+}
+
+.pack__nav > * {
+  min-width: 180px;
+}
+
+.payButton {
+  --alpha: 0.2;
+  display: block;
+  border-radius: 0;
+  width: 15rem;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.85);
+  padding: 0.6rem;
+  background-color: var(--color-dark);
+  margin: 1rem 0;
+}
+
+@media only screen and (min-width: 1024px) {
+  .payButton {
+    margin: 0 1rem;
+  }
+}
+
+.payButton:hover {
+  --alpha: 0.6;
+  background-color: var(--color-darker);
+}
+
+.payButton:active {
+  --alpha: 1;
+  -webkit-transform: scale(0.95, 0.95);
+          transform: scale(0.95, 0.95);
+  background-color: var(--color-darker);
+}
+
+.payButton span {
+  all: unset;
+  display: block;
+  background: transparent;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.payButton small {
+  font-size: 0.9rem;
+  display: block;
+  margin-top: 0.5rem;
+  color: var(--color-light);
+}
+
+.payButton.disabled {
+  --alpha: 0.9;
+  --alphaBG: 0.5;
+  background-color: var(--color-gray);
+  pointer-events: none;
+  cursor: not-allowed !important;
+  position: relative;
+  color: var(--color-gray-light);
+}
+
+.payButton.disabled * {
+  color: var(--color-gray-light);
+}
+
+.payButton.disabled::before {
+  content: attr(data-disabled);
+  position: absolute;
+  bottom: 2px;
+  left: 0;
+  right: 0;
+  padding: 2px 0;
+  height: 14px;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  background-color: rgba(255, 255, 0, 0.667);
+  color: black;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 10px;
+  line-height: 10px;
+}
+
+.pack .h5 {
+  margin: 0.5rem auto 0 auto;
+  font-weight: bold;
+}
+
+.thanks {
+  color: white;
+}
+/*# sourceMappingURL=style.css.map */

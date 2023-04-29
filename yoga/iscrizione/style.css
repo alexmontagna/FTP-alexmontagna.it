@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+:root {
+  font-size: 18px;
+}
+
+main {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1200px;
+  width: 92%;
+}
+
+@media only screen and (min-width: 1024px) {
+  main {
+    width: 85%;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Raleway', sans-serif;
+}
+
+* > * {
+  font-family: 'Raleway', sans-serif;
+}
+
+body {
+  background-color: whitesmoke;
+  width: 100%;
+  height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  font-size: 1em;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+aside {
+  margin: 2rem;
+}
+
+#mergeRow-gdpr {
+  margin: 1rem 0;
+}
+
+.content__gdpr label:nth-of-type(1) {
+  font-size: 1.4em;
+  font-weight: 600;
+}
+
+.mc_fieldset label:nth-of-type(1) {
+  font-size: 1em;
+  font-weight: 400;
+}
+
+.mc_fieldset {
+  margin: 1rem 0;
+  line-height: 1.3em;
+}
+
+.mc_embed_signup {
+  padding-bottom: 3rem;
+}
+
+#mc-embedded-subscribe-form input[type=checkbox] {
+  display: inline;
+  width: auto;
+  margin-right: 10px;
+}
+
+#mergeRow-gdpr {
+  margin-top: 20px;
+}
+
+#mergeRow-gdpr fieldset label {
+  font-weight: normal;
+}
+
+#mc-embedded-subscribe-form .mc_fieldset {
+  border: none;
+  min-height: 0px;
+  padding-bottom: 0px;
+}
+
+#mc_embed_signup {
+  background: #fff;
+  clear: left;
+  margin-bottom: 3rem;
+}
+
+input {
+  border-radius: 1px !important;
+}
+
+.content__gdprBlock {
+  font-size: 0.8rem;
+}
+
+.content__gdprBlock p {
+  margin-bottom: 1rem;
+}
+
+#mergeRow-gdpr > * {
+  font-style: italic;
+}
+
+.illustration {
+  width: 80%;
+  height: 320px;
+  background-image: url("./lezione-online-yoga-meditazione-alex-montagna-milano.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+/*# sourceMappingURL=style.css.map */

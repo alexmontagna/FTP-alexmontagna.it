@@ -1,0 +1,134 @@
+::-webkit-scrollbar {
+    width: 6px;
+    height: 3px;
+    border: 1px solid #d5d5d5;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 0;
+    background-color: #ddd;
+}
+
+::-webkit-scrollbar-thumb {
+    background: grayscale(#22031f);
+}
+
+::-webkit-scrollbar-thumb:horizontal {
+    background-color: $color-9;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: $green;
+}
+
+q {
+    quotes: "“" "”" "‘" "’";
+    position: relative;
+}
+q::before {
+    content: open-quote;
+    font-size: 1.9rem;
+    line-height: 1rem;
+    position: absolute;
+    transform: translate(-1rem, 0.3rem);
+}
+q::after {
+    content: close-quote;
+    font-size: 1.9rem;
+    transform: translate(0, 0.3rem);
+    position: absolute;
+    line-height: 1rem;
+    // bottom: .6rem;
+}
+
+// # for link underline animations
+%underline {
+    position: relative;
+    &:after {
+        content: "";
+        position: absolute;
+        bottom: -0.2rem;
+        right: 2rem;
+        width: 50%;
+        height: 0.14rem;
+        opacity: 0;
+        background-color: currentColor;
+        transition: all 140ms ease-in;
+    }
+    &:hover {
+        &:after {
+            opacity: 1;
+            right: 0;
+        }
+    }
+    &:focus {
+        outline: 2px solid $green;
+        outline-offset: rem(5);
+    }
+}
+
+acronym {
+    cursor: pointer;
+}
+
+.bodyModal {
+    height: 100vh;
+    overflow-y: hidden;
+}
+
+body {
+    box-sizing: border-box;
+    margin: 0;
+    border: 0;
+    font: inherit;
+    vertical-align: baseline;
+    -webkit-text-size-adjust: none;
+    min-height: 100vh;
+    // overflow-x: hidden;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #000;
+    color: rgba(255, 255, 255, 0.75);
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    line-height: 1.65em;
+    font-size: 12pt;
+}
+
+body {
+	display                : -moz-flex;
+	display                : -webkit-flex;
+	display                : -ms-flex;
+	display                : flex;
+	-moz-flex-direction    : column;
+	-webkit-flex-direction : column;
+	-ms-flex-direction     : column;
+	flex-direction         : column;
+	-moz-justify-content   : center;
+	-webkit-justify-content: center;
+	-ms-justify-content    : center;
+	justify-content        : center;
+	background-color       : #000;
+	
+}
+
+body>* {
+	position: relative;
+	z-index : 2;
+}
+
+body.is-loading *,
+body.is-loading *:before,
+body.is-loading *:after {
+	-moz-animation    : none !important;
+	-webkit-animation : none !important;
+	-ms-animation     : none !important;
+	animation         : none !important;
+	-moz-transition   : none !important;
+	-webkit-transition: none !important;
+	-ms-transition    : none !important;
+	transition        : none !important;
+}

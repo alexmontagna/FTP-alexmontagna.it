@@ -1,0 +1,216 @@
+@mixin mw {
+    width: 100%;
+    max-width: $wd;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  
+  @mixin smw {
+    width: 100%;
+    max-width: var(--container);
+    margin-right: auto;
+    margin-left: auto;
+  }
+  
+  @mixin c {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  @mixin px {
+    padding-right: var(--px);
+    padding-left: var(--px);
+  }
+  
+  @mixin spx {
+    padding-right: var(--spx);
+    padding-left: var(--spx);
+  }
+  
+  @mixin for($from: $lg, $finish-before: no) {
+    @if $finish-before != 'no' {
+      @media only screen and (min-width: $from) and (max-width: #{$finish-before}) {
+        @content;
+      }
+    } @else {
+      @media only screen and (min-width: $from) {
+        @content;
+      }
+    }
+  }
+  
+  @mixin ratio($w, $h) {
+    @if $w == 0 {
+      &:before {
+        display: none;
+      }
+    } @else {
+      &:before {
+        display: block;
+        content: '';
+        width: 100%;
+        padding-bottom: ($h/$w) * 100%;
+      }
+    }
+  }
+  
+  @mixin placeholder() {
+    ::-webkit-input-placeholder {
+      /* Chrome/Opera/Safari */
+      @content;
+    }
+  
+    ::-moz-placeholder {
+      /* Firefox 19+ */
+      @content;
+    }
+  
+    :-ms-input-placeholder {
+      /* IE 10+ */
+      @content;
+    }
+  
+    :-moz-placeholder {
+      /* Firefox 18- */
+      @content;
+    }
+  }
+  
+  @mixin autofill($bg, $text) {
+    *:-webkit-autofill,
+    *:-webkit-autofill:hover,
+    *:-webkit-autofill:focus,
+    *:-webkit-autofill:active {
+      box-shadow: 0 0 0 100vh $bg inset !important;
+      -webkit-text-fill-color: $text !important;
+    }
+  }
+  
+  @function vw($size, $breakpoint-max-w: 1920) {
+    $context: ($breakpoint-max-w * 0.01);
+    $result: round($size * 100 / $context) / 100;
+    @return #{$result}vw;
+  }
+  
+  @function vh($size, $breakpoint-max-h: 1080) {
+    $context: ($breakpoint-max-h * 0.01);
+    $result: round($size * 100 / $context) / 100;
+    @return #{$result}vh;
+  }
+  
+  @function rem($size) {
+    @return #{math.div($size, $fz)}rem;
+  }
+  
+  @mixin responsive(
+    $rule,
+    $mobile,
+    $tablet: null,
+    $ipad: null,
+    $desktop: null,
+    $big: null
+  ) {
+    #{$rule}: $mobile;
+    @if $tablet != null {
+      @include breakpoint($breakpoint-tablet) {
+        #{$rule}: #{$tablet};
+      }
+    }
+    @if $ipad != null {
+      @include breakpoint($breakpoint-ipad) {
+        #{$rule}: #{$ipad};
+      }
+    }
+    @if $desktop != null {
+      @include breakpoint($breakpoint-desktop) {
+        #{$rule}: #{$desktop};
+      }
+    }
+    @if $big != null {
+      @include breakpoint($breakpoint-big) {
+        #{$rule}: #{$big};
+      }
+    }
+  }
+  
+  // # mixins
+  
+  @mixin bg(
+    $imgpath,
+    $position: center center,
+    $repeat: no-repeat,
+    $size: cover
+  ) {
+    background: {
+      image: url($imgpath);
+      position: $position;
+      repeat: $repeat;
+      sizer: $size;
+    }
+  }
+  
+  // .test {
+  //   @include bg('/my/img/path.png');
+  // }
+  
+  @mixin backgroundShorthandWithExternalVar(
+    $filename,
+    $position: 0 0,
+    $repeat: no-repeat
+  ) {
+    background: transparent url(#{$imagedir}#{$filename}) $repeat $position;
+  }
+  
+  // .test {
+  //   @include backgroundShorthandWithExternalVar('filename.png');
+  // }
+  
+  @mixin centralize {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  @mixin findBackgroundHeight($width, $ratio) {
+    $height: $width * $ratio;
+    background-size: $width $height;
+  }
+  
+  .showFromDesktop {
+    display: none;
+    @include for($lg) {
+      display: block;
+    }
+  }
+  
+  .showFromTablet {
+    display: none;
+    @include for($md) {
+      display: block;
+    }
+  }
+  
+  .hideInTabletOrBigger {
+    display: block;
+    @include for($md) {
+      display: none;
+    }
+  }
+  
+  .hideWhenDesktop {
+    @include for($lg) {
+      display: none;
+      max-width: 0 !important;
+      max-height: 0 !important;
+      transform: scale(0, 0);
+      margin: 0;
+      padding: 0;
+    }
+  }
+  
+  .hideUntilBeforeDesktop {
+    @include for($nh, 1023px) {
+      display: none;
+    }
+  }
+  

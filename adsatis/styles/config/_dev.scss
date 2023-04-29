@@ -1,0 +1,118 @@
+// // # enable colors while developing
+.body {
+    .container {
+      background-color: red;
+    }
+    .inside {
+      background-color: rgb(104, 75, 235);
+    }
+    .inside__strict {
+      background-color: forestgreen;
+    }
+    .inside__stricter {
+      background-color: forestgreen;
+    }
+    .bigtitle {
+      background-color: yellow;
+      & + * {
+        background-color: pink;
+      }
+    }
+    p {
+      background-color: blue;
+    }
+    .carousel__slider {
+      background-color: darkmagenta;
+    }
+    .carousel__slide {
+      background-color: darksalmon;
+    }
+    .carousel__slide img {
+      outline: 5px solid sienna;
+    }
+    .toknowmore__padding {
+      background-color: yellow;
+    }
+    .toknowmore__options {
+      background-color: firebrick;
+    }
+    .news__list {
+      background-color: plum;
+    }
+  }
+  // // # enable colors while developing -- END
+  
+  // // # reduce header while developing
+  // .header {
+  //   padding: 0;
+  //   .tiny & {
+  //     &::after {
+  //       max-height: 0;
+  //       display: none;
+  //     }
+  //   }
+  // }
+  // .logo-big {
+  //   .tiny & {
+  //     opacity: 0;
+  //     visibility: hidden;
+  //     max-height: 0;
+  //     pointer-events: none;
+  //   }
+  // }
+  // .logo-small {
+  //   .tiny & {
+  //     opacity: 1;
+  //     visibility: visible;
+  //     max-height: 100vh;
+  //     pointer-events: all;
+  //   }
+  // }
+  // .header__group {
+  //   min-height: unset;
+  //   .tiny & {
+  //     min-height: unset;
+  //   }
+  // }
+  // // # reduce header while developing - END
+  
+  .dev {
+    display: none;
+    display: block;
+  }
+  
+  @mixin colonne {
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: linear-gradient(
+        90deg,
+        blue 0 10%,
+        red 9% 20%,
+        yellow 20% 30%,
+        green 1% 40%,
+        plum 1% 50%,
+        yellow 1% 60%,
+        sienna 1% 70%,
+        lime 1% 80%,
+        tomato 1% 90%,
+        blue 1% 100%
+      );
+      opacity: 0.2;
+      pointer-events: none;
+    }
+  }
+  
+  .home .nasdfasdews__list {
+    .news__card {
+      display: none;
+      &:nth-of-type(1),
+      &:nth-of-type(2),
+      &:nth-of-type(3) {
+        display: block;
+      }
+    }
+  }
+  

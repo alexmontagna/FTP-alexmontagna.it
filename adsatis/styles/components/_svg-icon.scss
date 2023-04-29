@@ -1,0 +1,282 @@
+a.footer-top-link .svg-icon {
+    width: 0.75em;
+    height: 0.4375em;
+    margin-right: 0.3125em;
+    margin-bottom: 0.0625em;
+}
+
+a.footer-top-link .svg-icon-path {
+    fill: #66676e;
+}
+
+.footer-top-link-label {
+    font-size: 0.75em;
+    color: #66676e;
+    font-weight: 600;
+    transition: color 0.15s linear;
+}
+
+a.footer-top-link:hover {
+    border-left: 1px solid #e91e63;
+    border-bottom: 1px solid #e91e63;
+    background-color: #e91e63;
+}
+
+a.footer-top-link:hover .svg-icon-path {
+    fill: #fff;
+}
+
+a.footer-top-link:hover .footer-top-link-label {
+    color: #fff;
+}
+
+.footer-column::after {
+    clear: both;
+    content: "";
+    display: block;
+}
+
+.footer-logo {
+    padding-right: 0.625em;
+}
+
+.footer-logo-canvas {
+    width: 4.5625em;
+    height: 5em;
+    position: relative;
+    display: inline-block;
+}
+
+.footer-logo-svg polygon {
+    stroke: #bbbcc3;
+    stroke-width: 1;
+    fill: transparent;
+    transition: stroke 0.15s linear;
+}
+
+.footer-logo-link:hover .footer-logo-svg polygon {
+    stroke: #42a5f5;
+}
+
+.footer-nav {
+    margin-bottom: 1.25em;
+}
+
+.footer-link-home,
+.footer-link-twitter {
+    padding-left: 0.4375em;
+    padding-right: 0.4375em;
+    margin-bottom: 0.625em;
+}
+
+.footer-link-home {
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 0.03em;
+    display: inline-block;
+}
+
+.footer-link,
+.footer-link-home:hover {
+    color: #999aa1;
+}
+
+.button,
+.form button {
+    letter-spacing: 0.02em;
+}
+
+.footer-link-twitter:after {
+    content: "\000A";
+    white-space: pre;
+}
+
+.footer-link-twitter:after::after {
+    clear: both;
+    content: "";
+    display: block;
+}
+
+.footer-link-twitter .svg-icon {
+    width: 1.375em;
+    height: 1.375em;
+    fill: #55acee;
+    position: relative;
+    top: 0.3125em;
+}
+
+.footer-link-twitter:hover .svg-icon {
+    fill: #99cdf5;
+}
+
+.footer-link {
+    padding: 0.4375em 0.1875em;
+    display: inline-block;
+}
+
+.footer-link:after {
+    content: " | ";
+    color: rgba(102, 103, 110, 0.35);
+    padding-left: 0.4375em;
+}
+
+.footer-link:last-child:after {
+    display: none;
+    padding-left: 0;
+}
+
+.footer-link:hover {
+    color: #fff;
+}
+
+@media only screen and (min-width: 20.0625em) {
+    .footer-link {
+        padding: 0.4375em 0.3125em;
+    }
+
+    .footer-link:after {
+        padding-left: 0.5625em;
+    }
+}
+
+.footer-link--blog:after {
+    display: none;
+}
+
+.footer-link--rss .svg-icon-rss {
+    width: 0.75em;
+    height: 0.75em;
+    fill: #66676e;
+}
+
+.footer-link--rss:hover .svg-icon-rss {
+    fill: #f57c00;
+}
+
+.footer-copyright {
+    font-size: 0.9em;
+    margin-bottom: 0;
+}
+
+.footer-copyright a {
+    color: #999aa1;
+}
+
+.button,
+.footer-copyright a:hover {
+    color: #fff;
+}
+
+.footer-made-with {
+    font-size: 0.85em;
+}
+
+.footer-made-with .svg-icon-heart-outline {
+    fill: #e91e63;
+    width: 1.25em;
+    height: 1.25em;
+    display: inline;
+    overflow: visible;
+    overflow-x: visible;
+    overflow-y: visible;
+    position: relative;
+    top: 0.1875em;
+    animation: heart-thump 1.5s linear infinite;
+    backface-visibility: hidden;
+}
+
+.flickity--images,
+.mce-form {
+    overflow: hidden;
+}
+
+@keyframes heart-thump {
+    0%,
+    100%,
+    16%,
+    32% {
+        transform: scale3d(1, 1, 1);
+    }
+
+    24%,
+    8% {
+        transform: scale3d(1.1, 1.1, 1);
+    }
+}
+
+@media only screen and (min-width: 51.25em) {
+    .footer-link-home,
+    .footer-link-twitter,
+    .footer-nav {
+        margin-bottom: inherit;
+    }
+
+    .footer {
+        text-align: left;
+    }
+
+    .footer-column--left {
+        float: left;
+        width: 25em;
+    }
+
+    .footer-column--right {
+        text-align: right;
+        padding-top: 1.8125em;
+        float: right;
+        width: 18.75em;
+    }
+
+    .footer-logo {
+        float: left;
+    }
+
+    .footer-logo-canvas {
+        width: 5.6875em;
+        height: 6.25em;
+    }
+
+    .footer-nav {
+        margin-top: 1.5625em;
+        display: block;
+    }
+
+    .footer-copyright {
+        font-size: 1em;
+    }
+
+    .footer-made-with {
+        font-size: 0.925em;
+    }
+}
+
+@media only screen and (min-width: 64em) {
+    .footer-top {
+        display: none;
+    }
+}
+
+.align,
+.align-cell {
+    width: 100%;
+    height: 100%;
+}
+
+.align {
+    display: table;
+}
+
+.align-cell {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.button {
+    font-size: 1rem;
+    font-weight: 700;
+    background-color: #2196f3;
+    border: 0;
+    padding: 0.9375rem 1.5625rem;
+    display: inline-block;
+}

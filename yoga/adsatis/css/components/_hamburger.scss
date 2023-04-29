@@ -1,0 +1,180 @@
+.menu-btn {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    border: 3px solid #fff;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-left: none;
+    margin: 3rem 0 0 -5px;
+    z-index: 10;
+}
+
+.menu-btn__burger::before,
+.menu-btn__burger::after {
+    content: '';
+    position: absolute;
+}
+
+.menu-btn__burger,
+.menu-btn__burger::before,
+.menu-btn__burger::after {
+    width: 50px;
+    height: 6px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(255, 101, 47, .2);
+    transition: all .4s ease-in-out;
+}
+
+
+
+.menu-btn__burger::before {
+    transform: translateY(-16px);
+}
+.menu-btn__burger::after {
+    transform: translateY(16px);
+}
+
+.menu-btn:hover {
+    background: rgb(66, 66, 66);
+}
+
+
+/* ANIMATION */
+
+.menu-btn.open .menu-btn__burger {
+    transform: translateX(-61px);
+    background: transparent;
+    box-shadow: none;
+}
+
+
+.menu-btn.open .menu-btn__burger::before {
+    transform: rotate(45deg) translate(43px, -43px);
+}
+.menu-btn.open .menu-btn__burger::after {
+    transform: rotate(-45deg) translate(43px, 43px);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.hide-mobile {
+    display: none;
+}
+
+.menu {
+    width     : 25px;
+    margin-top: 45%;
+    transform : skewY(-9deg);
+}
+
+nav.miomenu {
+    display: none;
+}
+nav.miomenu ul {
+    position   : fixed;
+    width      : 60%;
+    top        : 0;
+    right      : 0;
+    text-align : left;
+    background : rgb(36, 41, 44);
+    height     : 100%;
+    padding-top: 3em;
+    font-size  : 1.3em;
+}
+
+nav.miomenu ul li a {
+    color           : white;
+    text-decoration : none;
+    display         : block;
+    width           : 100%;
+    padding         : 1em 2em;
+    background-color: rgb(69, 79, 85);
+}
+
+nav.miomenu ul li a:hover {
+    background-color: rgb(113, 131, 141);
+}
+
+.exit-btn {
+    margin-bottom: 1em;
+    margin-top   : -1.3em;
+    text-align   : right;
+    padding      : 0 1.4em;
+}
+
+.exit-btn img {
+    width : 15px;
+    cursor: pointer;
+}
+
+@media only screen and (min-width: 7000px) {
+    .show-desktop {
+        display: block;
+        margin : 0 auto 13% auto;
+    }
+
+    .hide-desktop {
+        display: none;
+    }
+
+    nav.miomenu ul {
+        position   : inherit;
+        width      : auto;
+        background : none;
+        height     : auto;
+        display    : flex;
+        padding-top: 0;
+    }
+
+    nav.miomenu ul li {
+        float: left;
+    }
+
+    nav.miomenu ul li a {
+        color           : black;
+        background-color: inherit;
+        text-align      : right;
+        padding         : .5em 1em;
+    }
+
+    nav.miomenu ul li a:hover {
+        color        : white;
+        border-radius: 10px;
+    }
+}
+
+.scroll {
+    width    : 30px;
+    animation: move 1s infinite alternate;
+}
+
+@keyframes move {
+    0% {
+        transform: translateY(0px);
+    }
+
+    100% {
+        transform: translateY(4px);
+    }
+}
+

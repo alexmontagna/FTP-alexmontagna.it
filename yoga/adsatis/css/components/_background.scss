@@ -1,0 +1,42 @@
+// Background animation
+@keyframes bgVaiMobile {
+    0% {
+        background-position: 55% 60%;
+        filter: blur(3px);
+    }
+    100% {
+        background-position: 37% 60%;
+        filter: none;
+    }
+}
+@keyframes bgVai {
+    0% {
+        background-position: 55% 40%;
+        filter: blur(3px);
+    }
+    100% {
+        background-position: 55% 60%;
+        filter: none;
+    }
+}
+// Background mobile
+.bg {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: -100;
+    background-image: url(images/alex-montagna-galleria-vittorio-emanuele-milano-italia-asana-yoga.jpg);
+    background-size: auto 100vh;
+    background-attachment: fixed;
+    animation: bgVaiMobile 12s ease-in-out;
+}
+// Background non-mobile
+@media (min-width: 600px) {
+    .bg {
+        background-size: 100vw auto;
+        background-position: 55% 60%;
+        background-image: url(images/alex-montagna-galleria-vittorio-emanuele-milano-italia-asana-yoga.jpg);
+        background-blend-mode: screen;
+        animation: bgVai 9s ease-in-out;
+    }
+}

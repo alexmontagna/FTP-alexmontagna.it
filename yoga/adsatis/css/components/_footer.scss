@@ -1,0 +1,52 @@
+.footer {
+    padding: 1rem 0 3rem 0;
+    text-align: center;
+    a {
+        -moz-transition: opacity 0.2s ease-in-out;
+        -webkit-transition: opacity 0.2s ease-in-out;
+        -ms-transition: opacity 0.2s ease-in-out;
+        transition: opacity 0.2s ease-in-out;
+        opacity: 0.75;
+        padding: 0.2rem 0.6rem;
+    }
+    p {
+        margin: 1rem 0 2rem;
+        &:last-of-type {
+            margin-bottom: 5rem;
+        }
+    }
+}
+
+.footer .icons a:hover {
+    opacity: 0.75;
+}
+
+.footer .copyright {
+    font-size: 0.9em;
+    line-height: 1em;
+    margin: 2em 0 0 0;
+    padding: 0;
+    text-align: center;
+}
+
+.footer .copyright a {
+    color: inherit;
+}
+
+.footer .copyright li {
+    display: inline-block;
+    list-style: none;
+    margin-left: 1em;
+    padding-left: 1em;
+}
+
+.footer .copyright li:first-child {
+    border-left: 0;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+ul.icons li {
+    display: inline-block;
+    padding: 0 1.4em;
+}
