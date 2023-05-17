@@ -1,0 +1,104 @@
+{
+    "recipes": [
+        {
+            "id": 1,
+            "title": "Vegetable Stir-Fry",
+            "description": "Colorful and healthy stir-fried vegetables",
+            "image": "https://source.unsplash.com/800x600/?vegetable",
+            "ingredients": [
+                "2 cups mixed vegetables (broccoli, carrots, bell peppers, etc.)",
+                "2 tablespoons soy sauce",
+                "1 tablespoon sesame oil",
+                "1 tablespoon cornstarch",
+                "1 tablespoon vegetable oil",
+                "2 cloves of garlic, minced",
+                "1 teaspoon grated ginger",
+                "Salt and pepper to taste",
+                "Cooked rice or noodles for serving"
+            ]
+        },
+        {
+            "id": 2,
+            "title": "Caprese Salad",
+            "description": "Classic Italian salad with tomatoes, mozzarella, and basil",
+            "image": "https://source.unsplash.com/800x600/?caprese",
+            "ingredients": [
+                "2 large tomatoes, sliced",
+                "8 ounces fresh mozzarella cheese, sliced",
+                "1/2 cup fresh basil leaves",
+                "2 tablespoons extra virgin olive oil",
+                "1 tablespoon balsamic vinegar",
+                "Salt and pepper to taste"
+            ]
+        },
+        {
+            "id": 3,
+            "title": "Spinach and Mushroom Quesadillas",
+            "description": "Cheesy quesadillas filled with spinach and mushrooms",
+            "image": "https://source.unsplash.com/800x600/?quesadilla",
+            "ingredients": [
+                "4 large flour tortillas",
+                "2 cups fresh spinach",
+                "1 cup sliced mushrooms",
+                "1 cup shredded cheese (cheddar, mozzarella, or a combination)",
+                "1/2 teaspoon cumin",
+                "1/2 teaspoon paprika",
+                "Salt and pepper to taste",
+                "Salsa and sour cream for serving"
+            ]
+        },
+        {
+            "id": 4,
+            "title": "Quinoa Salad",
+            "description": "Healthy salad with quinoa, vegetables, and herbs",
+            "image": "https://source.unsplash.com/800x600/?quinoa",
+            "ingredients": [
+                "1 cup cooked quinoa",
+                "1 cup chopped cucumbers",
+                "1 cup cherry tomatoes, halved",
+                "1/2 cup chopped red onion",
+                "1/4 cup chopped fresh parsley",
+                "2 tablespoons lemon juice",
+                "2 tablespoons extra virgin olive oil",
+                "Salt and pepper to taste"
+            ]
+        },
+        {
+            "id": 5,
+            "title": "Vegetable Curry",
+            "description": "Flavorful curry with assorted vegetables",
+            "image": "https://source.unsplash.com/800x600/?curry",
+            "ingredients": [
+                "2 cups mixed vegetables (potatoes, carrots, peas, cauliflower, etc.)",
+                "1 onion, chopped",
+                "2 cloves of garlic, minced",
+                "1 tablespoon curry powder",
+                "1 teaspoon ground cumin",
+                "1 teaspoon ground coriander",
+                "1/2 teaspoon turmeric",
+                "1 can (400ml) coconut milk",
+                "2 tablespoons vegetable oil",
+                "Salt and pepper to taste",
+                "Cooked rice or naan bread for serving"
+            ]
+        },
+        {
+            "id": 6,
+            "title": "Mediterranean Pasta Salad",
+            "description": "Refreshing pasta salad with Mediterranean flavors",
+            "image": "https://source.unsplash.com/800x600/?pasta",
+            "ingredients": [
+                "8 ounces fusilli pasta",
+                "1 cup cherry tomatoes, halved",
+                "1/2 cup diced cucumber",
+                "1/4 cup sliced black olives",
+                "1/4 cup crumbled feta cheese",
+                "2 tablespoons chopped fresh parsley",
+                "2 tablespoons extra virgin olive oil",
+                "1 tablespoon lemon juice",
+                "1 clove garlic, minced",
+                "Salt and pepper to taste"
+            ]
+        }
+    ]
+}

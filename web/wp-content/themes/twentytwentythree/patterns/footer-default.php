@@ -13,13 +13,13 @@
 		<!-- wp:site-title {"level":0} /-->
 		<!-- wp:paragraph {"align":"right"} -->
 		<p class="has-text-align-right">
-		<?php
+			<!-- /* Translators: WordPress link. */ -->
+		<!-- <?php
 		printf(
-			/* Translators: WordPress link. */
 			esc_html__( 'Proudly powered by %s', 'twentytwentythree' ),
 			'<a href="' . esc_url( __( 'https://wordpress.org', 'twentytwentythree' ) ) . '" rel="nofollow">WordPress</a>'
 		)
-		?>
+		?> -->
 		</p>
 		<!-- /wp:paragraph -->
 	</div>
