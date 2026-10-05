@@ -1,5 +1,10 @@
 RewriteEngine on
 
+# The online practice moved to sapiens.yoga/online (Oct 2026). Only these
+# pages move; the others in /yoga/ stay where old links expect them.
+RewriteRule ^(index(\.html)?)?$ https://sapiens.yoga/online/ [R=301,L]
+RewriteRule ^(iscrizione|mailing)(/.*)?$ https://sapiens.yoga/online/#iscrizione [R=301,NE,L]
+
 RewriteCond %{THE_REQUEST} /([^.]+)\.html [NC]
 RewriteRule ^ /%1 [NC,L,R]
 
